@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Appointment_Scheduled</name>
+        <label>Appointment Scheduled?</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>CalendlyWidget_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Scheduled</defaultConnectorLabel>
+        <rules>
+            <name>Scheduled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Calendly_Scheduling_Widget.eventScheduled</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Thank_You_Page</targetReference>
+            </connector>
+            <label>Scheduled</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Calendly Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Calendly Screen Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>CalendlyWidget_Screen</name>
+        <label>CalendlyWidget Screen</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Appointment_Scheduled</targetReference>
+        </connector>
+        <fields>
+            <name>Calendly_Scheduling_Widget</name>
+            <extensionName>c:calendlySchedulingWidget</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>backgroundColor</name>
+                <value>
+                    <stringValue>#C3B0A9</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>calendlyLink</name>
+                <value>
+                    <stringValue>https://calendly.com/oyinfunke7</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>containerStyles</name>
+                <value>
+                    <stringValue> width:500px; height:800px; margin:0</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>utmSource</name>
+                <value>
+                    <stringValue>Salesforce Flow</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Finish</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Thank_You_Page</name>
+        <label>Thank You Page</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ThankYou</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-family: garamond; font-size: 48px; color: rgb(21, 30, 205);&quot;&gt;Your appointment has been successfully scheduled. I look forward to speaking with you soon!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CalendlyWidget_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>
