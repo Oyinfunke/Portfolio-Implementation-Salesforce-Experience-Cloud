@@ -86,3 +86,22 @@ This document outlines the implementation details of a Salesforce Experience Clo
 1. Gained experience in integrating third-party applications with Salesforce.
 
 2. Improved scheduling efficiency within the Experience Cloud environment.
+
+ 
+ ## Sharing Settings Configuration
+
+**Implementation Steps:**
+
+1. Configured Experience Cloud sharing settings to allow appropriate access to guest users while protecting sensitive data.
+
+2. Adjusted object and field-level security permissions to align with needed requirements.
+
+3. Tested various user scenarios to verify correct access levels.
+
+**Key Learnings:**
+
+1. Strengthened understanding of Salesforce security and access control.
+
+2. Ensured compliance with best practices in Experience Cloud site management.
+
+
