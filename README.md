@@ -105,3 +105,23 @@ This document outlines the implementation details of a Salesforce Experience Clo
 2. Ensured compliance with best practices in Experience Cloud site management.
 
 
+## Salesforce CMS Enablement
+
+**Implementation Steps:**
+
+1. Enabled Salesforce CMS within the org to manage and publish content efficiently.
+
+2. Configured content types, collections, and permissions to streamline content delivery.
+
+3. Integrated CMS content within the Experience Cloud site to create a dynamic and engaging user experience.
+
+4. Tested the content flow to ensure proper rendering and accessibility.
+
+
+**Key Learnings:**
+
+1. Developed expertise in Salesforce CMS setup and usage.
+
+2. Improved content management processes within Experience Cloud.
+
+
