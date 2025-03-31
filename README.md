@@ -62,3 +62,21 @@ This document outlines the implementation details of a Salesforce Experience Clo
   1. Improved understanding of HTML form integration with Salesforce.
   
   2. Enhanced lead management within the org.
+
+##  Calendly Integration
+
+**Implementation Steps:**
+
+1. Created a Calendly account and set up scheduling preferences.
+
+2. Embedded the Calendly widget into the Experience Cloud site for easy access to appointment booking.
+
+3. Utilized automation (e.g., Flow or Process Builder) to log scheduled appointments as Salesforce Events linked to the corresponding Leads or Contacts.
+
+4. Tested the integration to ensure smooth data flow between Calendly and Salesforce.
+
+**Key Learnings:**
+
+1.Gained experience in integrating third-party applications with Salesforce.
+
+2. Improved scheduling efficiency within the Experience Cloud environment.
