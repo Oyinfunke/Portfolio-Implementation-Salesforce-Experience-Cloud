@@ -16,13 +16,16 @@ This document outlines the implementation details of a Salesforce Experience Clo
   4. Embedded the form into the Experience Cloud site for seamless lead capture and integration with Salesforce.
 
 <p align="left"> 
+   <b>HTML customized Web-to-lead </b>
       <img src="images/Screenshot from 2025-03-31 11-02-36.png" alt="Web-to-lead form" style="width: 900px; height: 650px"/>
-      <br>
-      <b>HTML customized Web-to-lead </b>
+    
 </p>
 
 <p align="left"> 
 
+<p text-align='center'>
+<b>HTML Web-to-lead code</b>  
+</p>
 
 ```HTML
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWU00000Baby5" method="POST" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #002b56; border: 8px solid; border-image: linear-gradient(to bottom, #389f89, #4abdcd) 1; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
@@ -52,9 +55,7 @@ This document outlines the implementation details of a Salesforce Experience Clo
 
 </p>
 ```
-<p text-align='center'>
-<b>HTML Web-to-lead code</b>  
-</p>
+
   
 
 **Key Learnings:**
