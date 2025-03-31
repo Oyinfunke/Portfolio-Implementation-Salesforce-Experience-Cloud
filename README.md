@@ -76,6 +76,11 @@ This document outlines the implementation details of a Salesforce Experience Clo
 
 4. Tested the integration to ensure smooth data flow between Calendly and Salesforce.
 
+<p align="left"> 
+   <b>Calendly Screen-flow </b>
+      <img src="images/Screenshot from 2025-03-31 12-13-54.png" style="width: 900px; height: 650px"/>
+    </p>
+
 **Key Learnings:**
 
 1. Gained experience in integrating third-party applications with Salesforce.
